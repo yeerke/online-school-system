@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">GPA</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- <tr>
+            <th scope="row">1</th>
+            <td>Yerkebulan</td>
+            <td>Zhumalin</td>
+            <td>@4</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Nazerke</td>
+            <td>ZHumalin</td>
+            <td>3.39</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>asdf</td>
+            <td>the Bird</td>
+            <td>qwetr</td>
+        </tr> -->
+        <app-student *ngFor="let student of students" [student] = "student">
+        </app-student>
+    </tbody>
+  </table>
