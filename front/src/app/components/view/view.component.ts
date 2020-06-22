@@ -10,11 +10,10 @@ import { DataAccessService } from '../../services/data-access.service'
 export class ViewComponent implements OnInit {
   students: Student[];
   constructor(private dataAccessService: DataAccessService) { }
-
+  public ids = [];
   ngOnInit(): void {
     this.dataAccessService.refreshNeeds.subscribe(() => {
       this.getAllStudent();
-      console.log(this.students);
     });
     this.getAllStudent();
   }
@@ -25,5 +24,4 @@ export class ViewComponent implements OnInit {
       }
     );
   }
-
 }

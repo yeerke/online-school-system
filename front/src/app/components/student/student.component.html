@@ -1,10 +1,18 @@
+<div *ngIf="isClicked; else elseBlock" class="clicked" (click)="onclick()" >
+    {{student.id}} {{student.name}} {{student.surname}} {{student.gpa}}
+</div>
+<ng-template #elseBlock>
+    <div class="unclicked" (click)="onclick()">
+        {{student.id}} {{student.name}} {{student.surname}} {{student.gpa}}
+    </div>
+</ng-template>
+<!-- <div style="position:relative;">
+    <span style="position:absolute; left:0px; top:0px;">{{student.name}}</span>
+    <span style="position:absolute; left:100px; top:0px;">{{student.surname}}</span>
+</div> -->
 <!-- <tr>
-    <th scope="row">{{student.id}}</th>
+    <td scope="row">{{student.id}}</td>
     <td>{{student.name}}</td>
     <td>{{student.surname}}</td>
     <td>{{student.gpa}}</td>
-</tr> -->
-
-<div>
-    {{student.id}} {{student.name}} {{student.surname}} {{student.gpa}}
-</div>
+ </tr> -->

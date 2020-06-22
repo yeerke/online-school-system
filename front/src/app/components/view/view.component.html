@@ -1,16 +1,3 @@
-<!-- <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Surname</th>
-        <th scope="col">GPA</th>
-      </tr>
-    </thead>
-    <tbody>
-        <app-student *ngFor="let student of students" [student] = "student">
-        </app-student>
-    </tbody>
-  </table> -->
-  <app-student *ngFor="let student of students" [student] = "student">
-  </app-student>
+<app-student (eventChild)="ids.push($event)"
+*ngFor="let student of students" [student] = "student"></app-student>
+<app-edit-buttons [ids] = "ids"></app-edit-buttons>

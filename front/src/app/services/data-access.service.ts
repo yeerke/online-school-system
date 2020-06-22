@@ -16,6 +16,7 @@ export class DataAccessService {
   url:string = 'http://localhost:8080/';
   getStudentSuffix:string = '/all/student';
   addStudentSuffix:string = '/add/student';
+  deleteStudentSuffix:string = '/delete/student/'
   constructor(private http:HttpClient) { }
 
   getStudents():Observable<Student[]> {
@@ -31,5 +32,18 @@ export class DataAccessService {
         this._refreshNeeds.next();
       }
     );
+  }
+
+  deleteStudents(students: number[]): void {
+    for (let i = 0; i < students.length; ++i) {
+      this.http
+      .delete(this.url + this.deleteStudentSuffix + students[i].toString())
+      .toPromise()
+      .then(
+        data => {
+          this._refreshNeeds.next();
+        }
+      );
+    }
   }
 }
