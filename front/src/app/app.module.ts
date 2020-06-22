@@ -1,27 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewComponent } from './components/view/view.component';
 import { StudentComponent } from './components/student/student.component';
-import { AddStudentComponent } from './components/add-student/add-student.component';
 import { EditButtonsComponent } from './components/edit-buttons/edit-buttons.component';
+import { AddStudentDialogComponent } from './components/add-student-dialog/add-student-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewComponent,
     StudentComponent,
-    AddStudentComponent,
-    EditButtonsComponent
+    EditButtonsComponent,
+    AddStudentDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
     HttpClientModule
   ],
+  entryComponents: [AddStudentDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
