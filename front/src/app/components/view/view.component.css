@@ -1,0 +1,42 @@
+.CellLeft
+{
+    width: 5%;
+    border: solid #008000;
+    border-width: thin;
+    margin-left: 20%;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+
+.CellCenter
+{
+    width: 24%;
+    border: solid #008000;
+    border-width: thin;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+
+}
+
+.CellCenter
+{
+    width: 24%;
+    border: solid #008000;
+    border-width: thin;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+
+.CellRight
+{
+    width: 7%;
+    border: solid #008000;
+    border-width: thin;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+
+}

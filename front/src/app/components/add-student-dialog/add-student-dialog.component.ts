@@ -17,12 +17,18 @@ export class AddStudentDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onclick(): void {
+  submit(): void {
+    if (this.nameValue == null || this.gpaValue == null || this.surnameValue == null) return;
+    if (this.gpaValue < 0 || this.gpaValue > 4) return;
     this.dataAccessService.addStudent({
       'name': this.nameValue,
       'surname': this.surnameValue,
       'gpa': this.gpaValue,
     });
+    this.dialogRef.close();
+  }
+
+  cancel(): void {
     this.dialogRef.close();
   }
 }

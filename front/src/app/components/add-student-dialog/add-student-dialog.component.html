@@ -1,9 +1,19 @@
-<form>
-<input type="text" placeholder="name" (input)="nameValue=$event.target.value" required/>
-<div></div>
-<input type="text" placeholder="surname" (input)="surnameValue=$event.target.value" required/>
-<div></div>
-<input type="number" placeholder="gpa" (input)="gpaValue=$event.target.value" required/>
-<div></div>
-<button type="submit" (click)="onclick()">Submit</button>
-</form>
+<div class="box">
+	<form>
+		<span class="text-center">Add Student</span>
+	    <div class="input-container">
+		    <input type="text" (input)="nameValue=$event.target.value" required=""/>
+		    <label>Name</label>		
+	    </div>
+	    <div class="input-container">		
+		    <input type="mail" (input)="surnameValue=$event.target.value" required=""/>
+		    <label>Surname</label>
+        </div>  
+        <div class="input-container">		
+		    <input type="number" (input)="gpaValue=$event.target.value" required=""/>
+		    <label>GPA</label>
+	    </div>
+        <button type="button" class="btn" (click)="submit()">submit</button>
+		<button type="button" class="btn2" (click)="cancel()">cancel</button>
+    </form>	
+</div>

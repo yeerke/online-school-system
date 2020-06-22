@@ -1,26 +1,32 @@
-.clicked {
-    background-color: lightblue;
-}
-.unclicked {
-    background-color: white;
-}
-
-.div-table {
-    display: table;         
-    width: auto;         
-    background-color: #eee;         
-    border: 1px solid #666666;         
-    border-spacing: 5px; 
-}
-.div-table-row {
-    display: table-row;
-    width: auto;
-    clear: both;
-}
-.div-table-col {
+.CellLeft
+{
+    width: 5%;
+    border: solid #008000;
+    border-width: thin;
+    margin-left: 20%;
+    text-align: center;
     float: left;
-    display: table-column;         
-    width: 200px;         
-    background-color: #ccc;  
 }
 
+.CellCenter
+{
+    width: 24%;
+    border: solid #008000;
+    border-width: thin;
+    text-align: center;
+    float: left;
+
+}
+
+.CellRight
+{
+    width: 7%;
+    border: solid #008000;
+    border-width: thin;
+    text-align: center;
+    float: left;
+}
+
+#clicked {
+    background-color: rgba(181, 182, 181, 0.541);
+}

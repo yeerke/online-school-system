@@ -10,6 +10,10 @@ public class User {
         return username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public User(@JsonProperty("username") String username, @JsonProperty("password") String password) {
         this.username = username;
         this.password = password;

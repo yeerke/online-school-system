@@ -1,2 +1,4 @@
-<button (click)="addClick()">Add Student</button>
-<button *ngIf="ids.length>0" (click)="deleteClick()">Delete Students</button>
+<div>
+    <button class="btn btn-outline-success" (click)="addClick()">Add Student</button>
+    <button id="btn2" class="btn btn-outline-danger" *ngIf="ids.length>0" (click)="deleteClick()">Delete Students</button>
+</div>

@@ -1,18 +1,15 @@
-<div class="div-table-row">
-    <div *ngIf="isClicked; else elseBlock" class="clicked" (click)="onclick()" >
-        <div class="clicked" (click)="onclick()">
-            <div class="div-table-col">{{student.id}}</div>
-            <div class="div-table-col">{{student.name}}</div>
-            <div class="div-table-col">{{student.surname}}</div>
-            <div class="div-table-col">{{student.gpa}}</div>
-        </div>
+<div (click)="onclick()">
+    <div *ngIf="isClicked; else elseBlock">
+        <div id="clicked" class="CellLeft">{{student.id}}</div>
+        <div id="clicked" class="CellCenter">{{student.name}}</div>
+        <div id="clicked" class="CellCenter">{{student.surname}}</div>
+        <div id="clicked" class="CellRight">{{student.gpa}}</div>
     </div>
+
     <ng-template #elseBlock>
-        <div class="" (click)="onclick()">
-            <div class="div-table-col">{{student.id}}</div>
-            <div class="div-table-col">{{student.name}}</div>
-            <div class="div-table-col">{{student.surname}}</div>
-            <div class="div-table-col">{{student.gpa}}</div>
-        </div>
+        <div id="unclicked" class="CellLeft">{{student.id}}</div>
+        <div id="unclicked" class="CellCenter">{{student.name}}</div>
+        <div id="unclicked" class="CellCenter">{{student.surname}}</div>
+        <div id="unclicked" class="CellRight">{{student.gpa}}</div>
     </ng-template>
 </div>
