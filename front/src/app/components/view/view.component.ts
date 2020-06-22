@@ -24,4 +24,7 @@ export class ViewComponent implements OnInit {
       }
     );
   }
+  addId(id: number): void {
+    this.ids.push(id);
+  }
 }

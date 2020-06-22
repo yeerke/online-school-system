@@ -1,3 +1,8 @@
-<app-student (eventChild)="ids.push($event)"
-*ngFor="let student of students" [student] = "student"></app-student>
-<app-edit-buttons [ids] = "ids"></app-edit-buttons>
+<div class="div-table">
+    <app-student (addEvent)="addId($event)"  
+    (removeEvent)="ids.splice(ids.indexOf($event), 1)"
+    *ngFor="let student of students" [student] = "student">
+    </app-student>
+</div>
+
+<app-edit-buttons [ids] = "ids" (clearEvent)="this.ids=($event)"></app-edit-buttons>

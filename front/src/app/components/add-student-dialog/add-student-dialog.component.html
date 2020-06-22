@@ -1,8 +1,9 @@
-<input type="text" placeholder="name" (input)="nameValue=$event.target.value">
+<form>
+<input type="text" placeholder="name" (input)="nameValue=$event.target.value" required/>
 <div></div>
-<input type="text" placeholder="surname" (input)="surnameValue=$event.target.value">
+<input type="text" placeholder="surname" (input)="surnameValue=$event.target.value" required/>
 <div></div>
-<input type="number" placeholder="gpa" (input)="gpaValue=$event.target.value">
+<input type="number" placeholder="gpa" (input)="gpaValue=$event.target.value" required/>
 <div></div>
-<button type="button" (click)="onclick()">Submit</button>
-
+<button type="submit" (click)="onclick()">Submit</button>
+</form>

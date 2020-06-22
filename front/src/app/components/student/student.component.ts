@@ -9,7 +9,8 @@ import { Student } from '../../models/Students';
 export class StudentComponent implements OnInit {
   @Input() student: Student;
   isClicked: boolean = false;
-  @Output() eventChild = new EventEmitter();
+  @Output() addEvent = new EventEmitter();
+  @Output() removeEvent = new EventEmitter();
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class StudentComponent implements OnInit {
   }
   onclick(): void{
     this.isClicked = !this.isClicked;
-    this.eventChild.emit(this.student.id);
+    if (this.isClicked) {
+      this.addEvent.emit(this.student.id);
+    } else {
+      this.removeEvent.emit(this.student.id);
+    }
   }
 }

@@ -1,0 +1,18 @@
+    <div class="container">
+        <h1>Register</h1>
+        <hr>
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="username" id="username" 
+        (input)="usernameValue=$event.target.value" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" 
+        (input)="passwordValue=$event.target.value" required>
+        <button type="submit" (click)="register()" class="registerbtn">Register</button>
+        <div id="isregistrated">
+            {{notification}}
+        </div>
+    </div>
+  
+    <div class="container signin">
+        <p>Already have an account? <a href="/login">Sign in</a>.</p>
+    </div>

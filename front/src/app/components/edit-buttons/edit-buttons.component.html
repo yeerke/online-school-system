@@ -1,2 +1,2 @@
 <button (click)="addClick()">Add Student</button>
-<button (click)="deleteClick()">Delete Students</button>
+<button *ngIf="ids.length>0" (click)="deleteClick()">Delete Students</button>

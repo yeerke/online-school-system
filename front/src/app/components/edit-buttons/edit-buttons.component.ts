@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog'
 import { AddStudentDialogComponent } from '../add-student-dialog/add-student-dialog.component';
 import { DataAccessService } from '../../services/data-access.service';
@@ -10,6 +10,7 @@ import { DataAccessService } from '../../services/data-access.service';
 })
 export class EditButtonsComponent implements OnInit {
   @Input() ids: number[];
+  @Output() clearEvent = new EventEmitter();
   constructor(private dialog: MatDialog,
     private dataAccessService: DataAccessService) { }
 
@@ -20,9 +21,16 @@ export class EditButtonsComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     this.dialog.open(AddStudentDialogComponent)
+    this.clearSelectedHistory();
   }
   
   deleteClick(): void {
     this.dataAccessService.deleteStudents(this.ids);
+    this.clearSelectedHistory();
+  }
+
+  private clearSelectedHistory(): void {
+    this.ids = [];
+    this.clearEvent.emit([]);
   }
 }

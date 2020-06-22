@@ -10,6 +10,8 @@ import { ViewComponent } from './components/view/view.component';
 import { StudentComponent } from './components/student/student.component';
 import { EditButtonsComponent } from './components/edit-buttons/edit-buttons.component';
 import { AddStudentDialogComponent } from './components/add-student-dialog/add-student-dialog.component';
+import { UserAuthenticationComponent } from './components/user-authentication/user-authentication.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { AddStudentDialogComponent } from './components/add-student-dialog/add-s
     StudentComponent,
     EditButtonsComponent,
     AddStudentDialogComponent,
+    UserAuthenticationComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
