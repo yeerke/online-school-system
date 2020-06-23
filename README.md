@@ -1,4 +1,4 @@
-# online-school-system
+# online school system
 
 Скачиваем репозитори с помощью команды **git clone git@github.com:YerkebulanZhumalin/online-school-system.git**
 Запускаем локальный сервер Postgres (предполагаю База Данных Postgres заранее установлен) с помощью команды:
