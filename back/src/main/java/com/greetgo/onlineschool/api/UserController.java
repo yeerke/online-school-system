@@ -25,7 +25,7 @@ public class UserController {
     public boolean register(@RequestBody User user) {
         if (user.getUsername() == null || user.getUsername().equals("")) return false;
         if (user.getPassword() == null || user.getPassword().equals("")) return false;
-        if (userMapper.hasUser(user.getUsername()).size() == 1) return false;
+//        if (userMapper.hasUser(user.getUsername()).size() == 1) return false;
         userMapper.register(user);
         return true;
     }

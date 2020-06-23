@@ -1,4 +1,0 @@
-CREATE TABLE users (
-    username VARCHAR(100) UNIQUE NOT NULL PRIMARY KEY,
-    password VARCHAR(100) NOT NULL
-);

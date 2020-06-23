@@ -1,6 +1,0 @@
-CREATE TABLE student (
-    id SERIAL NOT NULL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    surname VARCHAR(100) NOT NULL,
-    gpa FLOAT NOT NULL
-);
