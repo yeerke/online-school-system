@@ -6,7 +6,10 @@
 2) MacOS: **pg_ctl -D /usr/local/var/postgres start**
 3) Linux: **sudo service postgresql start**
 
-Заходим в файл **back/src/main/resources/application.properties** меням **spring.datasource.password=password** на свой личный пароль от postgres юзера.
+Заходим в файл **back/src/main/resources/application.properties**:
+меняем **spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DATABASE** на существующую базу данных
+меняем **spring.datasource.username=YOUR_USERNAME** ставим юмя существующего юзера, который имеет доступ к базе данных указанной выше
+меняем **spring.datasource.password=YOUR_PASSWORD** на свой личный пароль от юзера.
 
 Заходим в папку **back/**, запускаем команду **mvn spring-boot:run** (предполагаю сборщик maven заранее установлен)
   
