@@ -1,6 +1,6 @@
 # Online School System
 
-Скачиваем репозитори с помощью команды **git clone git@github.com:YerkebulanZhumalin/online-school-system.git**
+Скачиваем репозиторий с помощью команды **git clone git@github.com:YerkebulanZhumalin/online-school-system.git**
 Запускаем локальный сервер Postgres (предполагаю База Данных Postgres заранее установлен) с помощью команды:
 1) Windows: **pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" start**
 2) MacOS: **pg_ctl -D /usr/local/var/postgres start**
