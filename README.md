@@ -6,9 +6,9 @@
 2) MacOS: **pg_ctl -D /usr/local/var/postgres start**
 3) Linux: **sudo service postgresql start**
 
-Заходим в файл **back/src/main/resources/application.properties** меням spring.datasource.password=password на свой пароль от postgres user-a.
+Заходим в файл **back/src/main/resources/application.properties** меням **spring.datasource.password=password** на свой личный пароль от postgres юзера.
 
-Заходим в папку **back/**, запускаем команду **mvn spring-boot:run** (предполагаю сборщик MVN заранее установлен)
+Заходим в папку **back/**, запускаем команду **mvn spring-boot:run** (предполагаю сборщик maven заранее установлен)
   
 Заходим в папку **front/**, запускаем команду **ng serve --open** (предполагаю node и angular заранее установлены), после чего, в Браузере автоматический откроется проект.
 

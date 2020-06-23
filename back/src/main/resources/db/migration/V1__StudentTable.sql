@@ -4,3 +4,4 @@ CREATE TABLE student (
     surname VARCHAR(100) NOT NULL,
     gpa FLOAT NOT NULL
 );
+
