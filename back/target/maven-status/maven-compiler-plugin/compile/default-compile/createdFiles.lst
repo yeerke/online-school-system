@@ -1,0 +1,7 @@
+com/greetgo/onlineschool/api/UserController.class
+com/greetgo/onlineschool/api/StudentController.class
+com/greetgo/onlineschool/OnlineSchoolApplication.class
+com/greetgo/onlineschool/model/User.class
+com/greetgo/onlineschool/dao/StudentMapper.class
+com/greetgo/onlineschool/dao/UserMapper.class
+com/greetgo/onlineschool/model/Student.class
